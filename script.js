@@ -28,15 +28,24 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    for(let i=0; i<=5; i++) {
-        const playerSelection = prompt('Rock, Paper, Scissors?').toLocaleUpperCase()
-        const computerSelection = getComputerChoice();
+    document.getElementById('rock').addEventListener('click', () => {
+        const playerSelection = 'ROCK'
+        const computerSelection = getComputerChoice()
+        console.log(playRound(playerSelection, computerSelection))
+    })
 
-        let result = playRound(playerSelection, computerSelection)
-        console.log(playerSelection)
-        console.log(computerSelection)
-        console.log(result)
-    }
+    document.getElementById('paper').addEventListener('click', () => {
+        const playerSelection = 'PAPER'
+        const computerSelection = getComputerChoice()
+        console.log(playRound(playerSelection, computerSelection))
+    })
+
+    document.getElementById('scissors').addEventListener('click', () => {
+        const playerSelection = 'SCISSORS'
+        const computerSelection = getComputerChoice()
+        console.log(playRound(playerSelection, computerSelection))
+    })
 }
+
 
 game()
